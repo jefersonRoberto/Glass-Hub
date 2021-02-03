@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<hmtl lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Glass web</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <main>
+      <section class="glass">
+        <div class="dashboard">
+          <div class="user">
+            <img src="./img/profile-icon.png" alt="" />
+            <h3>NAME</h3>
+            <p>MEMBER</p>
+          </div>
+          <div class="links">
+            <div class="link">
+              <img src="" alt="" />
+              <a href="store.html">SHOP</a>
+            </div>
+            <div class="link">
+              <img src="index.html" alt="" />
+              <a href="#">PROFILE</a>
+            </div>
+            <div class="link">
+              <img src="" alt="" />
+              <a href="#">WALLET</a>
+            </div>
+            <div class="link">
+              <a href="#">LIBRARY</a>
+            </div>
+            <div class="link">
+              <img src="" alt="" />
+              <a href="#">ACHIEVEMENTS</a>
+            </div>
+            <div class="link">
+              <a href="#">JOIN PRO FOR MORE</a>
+              <img src="#" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="games">
+          <div class="status">
+            <h1>PLAYING</h1>
+            <input type="text" />
+          </div>
+          <div class="cards">
+            <div class="card">
+              <img src="./img/assassins-icon.png" alt="" />
+              <div class="card-info">
+                <h2>Assassin's Creed</h2>
+                <p>PS5 VERSION</p>
+                <div class="progress"></div>
+              </div>
+              <h2 class="percentage">42%</h2>
+            </div>
+            <div class="card">
+              <img src="./img/borderlands-icon.png" alt="" />
+              <div class="card-info">
+                <h2>BORDERLANDS 3</h2>
+                <p>PS5 VERSION</p>
+                <div class="progress"></div>
+              </div>
+              <h2 class="percentage">42%</h2>
+            </div>
+            <div class="card">
+              <img src="./img/GTA-icon.png" alt="" />
+              <div class="card-info">
+                <h2>Grand theft auto V</h2>
+                <p>PS5 VERSION</p>
+                <div class="progress"></div>
+              </div>
+              <h2 class="percentage">42%</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+
+    <script>
+      const buttons = document.querySelectorAll('a')
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', function (e) {
+          let x = e.clientX - e.target.offsetleft
+          let y = e.clientY - e.target.offsettop
+
+          let ripples = document.createElement('span')
+          ripples.style.left = x + 'px'
+          ripples.style.top = y + 'px'
+          this.appendChild(ripples)
+          setTimeout(() => {
+            ripples.remove()
+          }, 1000)
+        })
+      })
+    </script>
+  </body>
+</hmtl>
